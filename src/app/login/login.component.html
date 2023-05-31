@@ -1,0 +1,26 @@
+<form class="card log" [formGroup]="form">
+        <div class="top">
+            <h1>TODO list</h1>
+        </div>
+        <div>
+            <h2>Log In</h2>
+        </div>
+        <div class="inp form-group">
+            <span>Email</span>
+            <input type="email" placeholder="Email" formControlName="email" class="form-control">
+        </div>
+        <div class="inp form-group">
+            <span>Password</span>
+            <input type="password" placeholder="Password" formControlName="password" class="form-control">
+        </div>
+        <div>
+            <input type="button" value="LOG IN" (click)="Login()">
+        </div>
+        <div class="sign">
+            <span>Do not have an account?</span>
+            <button class="sign" routerLink="/signup">Sign Up</button>
+        </div>
+        <div class="errorHandle">
+            <p [class.error]="errorHandle">{{msg}}</p>
+        </div>
+    </form>

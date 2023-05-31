@@ -1,0 +1,121 @@
+.card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 60px auto 0 auto;
+    gap: 30px;
+    align-items: center;
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.card h1{
+    color: #baa4e1;
+    padding: 0;
+    margin: 5px;
+}
+.card h2{
+    color: gray;
+    margin: -20px;
+}
+.card .inp{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 5px;
+    width: 70%;
+}
+.card .inp span{
+    color: #baa4e1;
+    font-size: 18px;
+    padding-left: 4px;
+    transition: all 0.3s linear;
+}
+.card .inp input{
+    border: none;
+    background-color: #ECECEC;
+    height: 25px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s linear;
+    width: 100%;
+}
+.card .inp input:focus{
+    outline:1px solid #baa4e1;
+    transition: all 0.3s linear;
+    width: 120%;
+    margin-left: -20px;
+}
+.card .inp:has(input:focus) span{
+   margin-left: -20px;
+   transition: all 0.3s linear;
+}
+.card input[type='button']{
+    background-color: #baa4e1;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #ECECEC;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.card input[type='button']:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    opacity: 90%;
+    background-color: #673AB7;
+    transition: all 0.3s linear;
+}
+.card .sign{
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.card .sign button.sign{
+    color: #baa4e1;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.card .sign button.sign:hover{
+    color: #673AB7;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    justify-content: center;
+}
+.card .content{
+    width: 150px;
+}
+.signup button{
+    background-color:white;
+    color: #baa4e1;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: -50px;   
+}
+.signup button:hover{
+    color: #673AB7;
+}
+.errorHandle p {
+    margin: 0;
+    padding: 5px 10px;
+    color: black;
+    text-align: left;
+    visibility: hidden;
+    background-color: #FAD3D3;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.form__field p.error,
+.errorHandle p.error {
+    visibility: visible;
+}

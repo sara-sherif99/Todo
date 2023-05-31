@@ -1,0 +1,45 @@
+<nav>
+    <div class="logo">
+        <i class="fa-solid fa-check-double"></i>
+        <h1>TODO</h1>
+    </div>
+    <div>Hey.. {{user.name}}!!</div>
+    <div class="icons">
+        <button #but1 class="icon"  (click)="AddTodo(but1)" (click)="but1.classList.toggle('active')">
+            <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <button #but2 class="icon" (click)="but2.classList.toggle('active')">
+            <i class="fa-solid fa-calendar"></i>
+        </button>
+        <button #but3 class="icon" (click)="but3.classList.toggle('active')">
+            <i class="fa-solid fa-circle-check"></i>
+        </button>
+        <button #but4 class="icon" (click)="Logout()" (click)="but4.classList.toggle('active')">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </div>
+</nav>
+<div class="cards">
+    <div class="card"  *ngFor="let t of todos" (mouseenter)="show($event)" (mouseleave)="show($event)">
+        <div class="header">
+            <h2>{{t.title}}</h2>
+            <p>{{t.dateCreated}}</p>
+            
+        </div>
+        <div class="content">
+            <p>{{t.content}}</p>
+        </div>
+        <div class="deadline">
+            <h3>Deadline</h3>
+            <p>{{t.deadline.substring(0, 10)}}</p>
+        </div>
+        <div class="controllers">
+            <button class="icon" (click)="EditTodo(t)">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="icon" (click)="DeleteTodo(t)">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+    </div>
+</div>
